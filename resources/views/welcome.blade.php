@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Carlos Salvador Amores Martinez
                 </div>
 
                 <div class="links">
