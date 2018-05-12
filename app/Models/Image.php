@@ -11,4 +11,11 @@ class Image extends Model
 
 
     protected $fillable = ['name', 'article_id'];
+
+
+    // Realcion uno a muchos con imagenes
+    // 
+    public function article(){
+        return $this->belongsTo('App\Models\Article');
+    }
 }

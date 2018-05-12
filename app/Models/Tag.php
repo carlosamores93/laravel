@@ -11,4 +11,10 @@ class Tag extends Model
 
 
     protected $fillable = ['name'];
+
+
+    // Relacion demuchos a muchos con articulos
+    public function articles(){
+    	return $this->belongsToMany('App\Models\Article')->withTimestamps();	
+    }
 }
