@@ -1,5 +1,6 @@
 <?php
 
+use Cviebrock\EloquentSluggable\Sluggable;
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -10,8 +11,23 @@ class Article extends Model
     protected $table = 'articles';
 
 
-    protected $fillable = ['title', 'content', 'category_id', 'user_id'];
+    protected $fillable = ['title', 'content', 'slug', 'category_id', 'user_id'];
 
+    use Sluggable;
+
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 
     // Un articulo, solo a una categoria
     public function category(){
