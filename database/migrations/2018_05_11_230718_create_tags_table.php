@@ -16,6 +16,8 @@ class CreateTagsTable extends Migration
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('slug');
+            $table->enum('status', ['active', 'inactive'])->default('inactive');
 
             // Vamos hacer una relacion muchos a muchos, con una tabla como pivote
 

@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug');
+            $table->enum('status', ['active', 'inactive'])->default('inactive');
             $table->text('content');
 
 
