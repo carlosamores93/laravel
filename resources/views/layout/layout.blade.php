@@ -16,15 +16,15 @@
     </head>
     <body>
 
-        <section style="padding-left:  10%; padding-right:  10%;">
+        <section style="margin-left: 10%;margin-right: 10%;margin-top:  1%;border-radius:  5px;">
             @include('layout.nav')
         </section>
 
-        <section style="padding-left:  10%; padding-right:  10%;">
+        <section style="margin-left: 10%;margin-right: 10%;margin-top:  1%;padding: 2%;border: 1px solid grey;border-radius:  5px;">
             @yield('content')
         </section>
 
-        <section style="padding-left:  10%; padding-right:  10%;">
+        <section style="margin-left: 10%;margin-right: 10%;margin-top:  1%;margin-bottom:  1%;border: 1px solid grey;border-radius:  5px;">
             @include('layout.footer')
         </section>
 
