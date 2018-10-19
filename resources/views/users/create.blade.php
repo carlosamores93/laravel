@@ -10,7 +10,7 @@
 	<h1> Crear usuario </h1>
 
 
-	{{ Form::open(['route' => 'users.store', 'method' => 'POST']) }}
+	{{ Form::open(['route' => 'users.store', 'method' => 'POST', 'class' => 'form-horizontal']) }}
 		<div class="form-group">
 			{{ Form::label('name', 'Nombre') }}
 			{{ Form::text('name', null, ['class' => 'form-control', 'required', 'placeholder' => 'Introduce tu nombre']) }}
@@ -32,8 +32,9 @@
 		</div>
 
 
-		<div class="form-group">
-			{{ Form::submit('Registrar usuario', ['class'=>'btn btn-primary']) }}
+		<div class="form-group text-center">
+			<a href="{{ route('users.index') }}" class="btn btn-info">Volver</a>
+			{{ Form::submit('Registrar usuario', ['class'=>'btn btn-primary']) }}	
 		</div>
 
 
