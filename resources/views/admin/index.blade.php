@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('layout.layout')
 
 @section('title')
     Inicio administrador

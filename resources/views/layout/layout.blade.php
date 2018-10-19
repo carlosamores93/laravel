@@ -16,10 +16,16 @@
     </head>
     <body>
 
-        @include('admin.nav')
+        <section style="padding-left:  10%; padding-right:  10%;">
+            @include('layout.nav')
+        </section>
 
-        <section>
+        <section style="padding-left:  10%; padding-right:  10%;">
             @yield('content')
+        </section>
+
+        <section style="padding-left:  10%; padding-right:  10%;">
+            @include('layout.footer')
         </section>
 
         <script src="{{ asset('plugins/js/jquery-3.3.1.js') }}" ></script>
